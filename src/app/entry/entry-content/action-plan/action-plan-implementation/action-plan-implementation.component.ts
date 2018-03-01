@@ -4,6 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Evaluation } from 'app/entry/entry-content/evaluations/evaluation.model';
 
 import { PiaService } from 'app/entry/pia.service';
+import { GlobalEvaluationService } from 'app/services/global-evaluation.service';
 
 @Component({
   selector: 'app-action-plan-implementation',
@@ -20,7 +21,8 @@ export class ActionPlanImplementationComponent implements OnInit {
   @ViewChild('estimatedEvaluationDate') private estimatedEvaluationDate: ElementRef;
   @ViewChild('personInCharge') private personInCharge: ElementRef;
 
-  constructor(private _piaService: PiaService) { }
+  constructor(private _piaService: PiaService,
+              public _globalEvaluationService: GlobalEvaluationService) { }
 
   ngOnInit() {
     this.actionPlanForm = new FormGroup({
@@ -50,9 +52,7 @@ export class ActionPlanImplementationComponent implements OnInit {
    * Focuses estimated evaluation date field.
    */
   estimatedEvaluationDateFocusIn() {
-    if (this._piaService.pia.status >= 2) {
-      return false;
-    } else {
+    if (this._globalEvaluationService.evaluationEditionEnabled) {
       this.actionPlanForm.controls['estimatedEvaluationDate'].enable();
       this.estimatedEvaluationDate.nativeElement.focus();
     }
@@ -76,16 +76,14 @@ export class ActionPlanImplementationComponent implements OnInit {
    * Focuses estimated evaluation date field.
    */
   personInChargeFocusIn() {
-    if (this._piaService.pia.status >= 2) {
-      return false;
-    } else {
+    if (this._globalEvaluationService.evaluationEditionEnabled) {
       this.actionPlanForm.controls['personInCharge'].enable();
       this.personInCharge.nativeElement.focus();
     }
   }
 
   /**
-   * Disables action plan fields and saves data.
+   * Updates person in charge field.
    */
   personInChargeFocusOut() {
     let userText = this.actionPlanForm.controls['personInCharge'].value;
