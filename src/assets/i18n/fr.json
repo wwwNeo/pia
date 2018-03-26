@@ -876,8 +876,11 @@
     "modal_select_text_pia": {
       "content": "Le contenu du Rapport Pia a été copié dans votre presse-papier"
     },
-    "update_server_url": {
-      "content": "L'adresse du serveur à été mise à jour."
+    "update_server_url_ok": {
+      "content": "L'adresse du serveur à été mise à jour :<br>connexion établie."
+    },
+    "update_server_url_nok": {
+      "content": "L'adresse du serveur à été mise à jour :<br>connexion impossible."
     },
     "signed_pia_validation": {
       "content": "<span class='strong'>Le PIA est accepté</span><br>Finalisez la validation du PIA en attachant<br>en pièce jointe le rapport signé par le responsable.",
