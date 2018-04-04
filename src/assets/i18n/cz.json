@@ -885,8 +885,11 @@
     "modal_select_text_pia": {
       "content": "TO BE TRANSLATED - The content of pia has been copied on your clipboard"
     },
-    "update_server_url": {
-      "content": "Adresa serveru byla aktualizována."
+    "update_server_url_ok": {
+      "content": "TO BE TRANSLATED - The server address has been updated."
+    },
+    "update_server_url_nok": {
+      "content": "TO BE TRANSLATED - Connection impossible."
     },
     "signed_pia_validation": {
       "content": "<span class='strong'>PIA je přijata</span><br>Dokončit validaci PIA připojením podepsané zprávy odpovědnou osobou.",

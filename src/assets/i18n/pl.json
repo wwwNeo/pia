@@ -882,8 +882,11 @@
     "completed_evaluation": {
       "content": "TO BE TRANSLATED - The PIA has been fully reviewed, it has to be validated."
     },
-    "update_server_url": {
-      "content": "Adres serwera został zaktualizowany."
+    "update_server_url_ok": {
+      "content": "TO BE TRANSLATED - The server address has been updated."
+    },
+    "update_server_url_nok": {
+      "content": "TO BE TRANSLATED - Connection impossible."
     },
     "signed_pia_validation": {
       "content": "<span class='strong'>PIA została zaakceptowana</span><br>Można sfinalizować zatwierdzenie PIA załączając<br>raport podpisany przez osobę odpowiedzialną.",
